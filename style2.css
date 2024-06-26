@@ -8,15 +8,16 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 :root {
     --bg-color: #1a1a1a;        /* Arka plan rengi (koyu gri) */
-    --second-bg-color: #555555; /* İkincil arka plan rengi (daha koyu gri) */
-    --text-color: #ffffff;      /* Metin rengi (açık gri) */
-    --main-color: #00FFFF;      /* Ana vurgu rengi (neon pembe) */
+    --second-bg-color: #555; /* İkincil arka plan rengi (daha koyu gri) */
+    --text-color: #fff;      /* Metin rengi (açık gri) */
+    --main-color: #0FF;      /* Ana vurgu rengi (neon pembe) */
 }
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -71,11 +72,12 @@ body {
 }
 
 #menu-icon {
-    display: block;
-    position: fixed; /* ya da absolute olarak deneyin */
-    top: 20px; /* ya da istediğiniz bir değer */
-    right: 20px; /* ya da istediğiniz bir değer */
-    z-index: 1000;
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+    
 }
 
 section {
@@ -100,14 +102,14 @@ section {
     font-size: 2.9rem;
     font-weight: 700;
     line-height: 1.3;
-    margin: 0 0 15px 0;
+    margin: 0 0 15px;
 }
 
 .home-content h5 {
     font-size: 5rem;
     font-weight: 700;
     line-height: 1.3;
-    margin: 115px 0 40px 0;
+    margin: 115px 0 40px;
     position: relative;
     right: -5px;
 }
@@ -116,7 +118,7 @@ section {
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 1.3;
-    margin: 10px 0 40px 0;
+    margin: 10px 0 40px;
     position: relative;
     right: -10px;
 }
@@ -127,7 +129,7 @@ section {
 }
 
 .mentor p {
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
     position: absolute;
     top: -20px;
     right: -150px;
@@ -143,11 +145,11 @@ section {
 }
 
 .home-content .text-animate h3 {
-    margin: 20px 0 15px 0;
+    margin: 20px 0 15px;
     font-size: 3.2rem;
     -webkit-text-stroke: .7px var(--main-color);
     background-image: linear-gradient(var(--main-color), var(--main-color));
-    -webkit-background-clip: text;
+    background-clip: text;
     animation: textBlink 1s infinite;
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
@@ -229,22 +231,26 @@ section {
     background: var(--second-bg-color);
     padding: 1rem;
 }
+
 .about h2 {
     font-size: 4.2rem;
     margin-right: 1rem;
     margin-bottom: -4rem;
 }
+
 .row{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
+
 .about-item {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .about-img {
     position: relative;
     border-radius: 50%;
@@ -253,6 +259,7 @@ section {
     align-items: center;
     margin-bottom: 1rem;
 }
+
 .about-img img {
     width: 75%;
     border-radius: 50%;
@@ -263,6 +270,7 @@ section {
     text-align: center;
     
 }
+
 .about-content h3 {
     position: relative;
     display: inline-block;
@@ -270,22 +278,23 @@ section {
     margin: 1rem 0 3rem;
 
 }
+
 .about-content p {
     position: relative;
     font-size: 1.8rem;
-    margin: 20px 0 0 0px;
+    margin: 20px 0 0;
     border: 2px solid var(--main-color); /* Örnek çerçeve stilini buraya uygulayın */
     padding: 10px; /* Opsiyonel: içerideki boşluğu ayarlar */
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
     .about-item {
         width: 48%;
         margin-bottom: 2rem;
     }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
     .about-item {
         width: 30%;
         margin-bottom: 2rem;
@@ -305,11 +314,13 @@ section {
     padding: 100px 1px;
     background-color: var(--bg-color);
 }
+
 .duty h2{
     margin-top: -35px;
     text-align: center;
     font-size: 4.2rem;
 }
+
 .duty-row {
     display: flex;
     flex-wrap: wrap;
@@ -318,6 +329,7 @@ section {
     margin: 1rem auto;
     
 }
+
 .duty-column {
     flex: 1;
     min-width: 20%;
@@ -325,27 +337,32 @@ section {
     padding: 20px;
     border-radius: 8px;
     background-color: var(--second-bg-color);
-    box-shadow: 0 8px 24px rgba(0,0,0,1);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 100%);
     transition: transform 0.3s;
 }
+
 .duty-column:hover {
     transform: translateY(-10px);
 }
+
 .duty-content {
     margin-bottom: 30px;
     border: .1rem solid var(--main-color);
 
 }
+
 .content {
     padding: 20px;
     background: var(--bg-color);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
     transition: background-color 0.3s;
 }
+
 .content p {
     font-size: 1.55rem;
 }
+
 .year {
     font-size: 2rem;
     color: var(--text-color);
@@ -361,11 +378,13 @@ h2.heading {
     font-size: 4.2rem;
     color: var(--text-color);
 }
+
 .education p {
     text-align: center;
     font-size: 1.7rem;
     color: var(--text-color);
 }
+
 .projects-skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -373,81 +392,96 @@ h2.heading {
     margin: 30px auto;
     max-width: 1500px;
     padding: 1px;
-    box-shadow: 0 8px 24px rgba(0,0,0,1);
-
+    box-shadow: 0 8px 24px rgb(0 0 0 / 100%);
     border: .1rem solid var(--main-color);
 
 }
+
 .projects-column, .skills-column {
     flex: 1;
     min-width: 300px;
     margin: 10px;
 }
+
 .project-card {
     font-size: 1.3rem;
     background-color: #fff;
     border-radius: 10px;
     padding: 1px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
     margin-bottom: 23px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
 }
+
 .card-content {
     padding: 20px;
     text-align: center;
 }
+
 .card-year {
     font-size: 1.2em;
     color: #555;
 }
+
 .skill-card {
     font-size: 1.3rem;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
     margin-bottom: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .skill-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
 }
+
 .card-content2 {
     padding: 20px;
     text-align: center;
 }
+
 .card-content2 h3 {
     font-size: 1.2em;
     color: #555;
 }
+
 .red {
-    color: #ff0000;
+    color: #f00;
 }
+
 .yellow {
-    color: #ffcc00;
+    color: #fc0;
 }
+
 .green {
-    color: #00cc66;
+    color: #0c6;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -464,7 +498,7 @@ h2.heading {
 .contact h2 {
     display: inline-block;
     font-size: 4.7rem;
-    margin: -30px 0 10px 0; /* Başlığın altında 20 piksel boşluk bırak */
+    margin: -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
 }
 
 .contact form {
@@ -539,7 +573,7 @@ h2.heading {
 .btn-box.btns {
     display: inline-block;
     width: 50rem;
-    margin: -30px 0 10px 0; /* Başlığın altında 20 piksel boşluk bırak */
+    margin: -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
 }
 
 .btn-box.btns a::before {
@@ -605,7 +639,7 @@ h2.heading {
 
 
 
-@media (min-width: 468px) and (max-width: 1200px) {
+@media (width >= 468px) and (width <= 1200px) {
     .header {
         padding: 2rem 5%;
     }
@@ -650,7 +684,7 @@ h2.heading {
         font-size: 3.5rem;
         font-weight: 700;
         line-height: 1.3;
-        margin: 115px 0 40px 0;
+        margin: 115px 0 40px;
         position: relative;
         right: -5px;
     }
@@ -659,17 +693,17 @@ h2.heading {
         font-size: 2.3rem;
         font-weight: 700;
         line-height: 1.3;
-        margin: 10px 0 40px 0;
+        margin: 10px 0 40px;
         position: relative;
         right: -10px;
     }
 
     .home-content .text-animate h3 {
-        margin: 20px 0 15px 0;
+        margin: 20px 0 15px;
         font-size: 2.5rem;
         -webkit-text-stroke: .7px var(--main-color);
         background-image: linear-gradient(var(--main-color), var(--main-color));
-        -webkit-background-clip: text;
+        background-clip: text;
         animation: textBlink 1s infinite;
         -webkit-text-fill-color: transparent;
         text-fill-color: transparent;
@@ -758,7 +792,7 @@ h2.heading {
         margin: 30px auto;
         max-width: 1500px;
         padding: 1px;
-        box-shadow: 0 8px 24px rgba(0,0,0,1);
+        box-shadow: 0 8px 24px rgb(0 0 0 / 100%);
         border: .1rem solid var(--main-color);
     }
 
@@ -773,7 +807,7 @@ h2.heading {
         background-color: #fff;
         border-radius: 10px;
         padding: 1px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
         margin-bottom: 23px;
         overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -781,7 +815,7 @@ h2.heading {
 
     .project-card:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
     }
 
     .card-content {
@@ -798,7 +832,7 @@ h2.heading {
         font-size: 1.3rem;
         background-color: #fff;
         border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
         margin-bottom: 10px;
         overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -806,7 +840,7 @@ h2.heading {
 
     .skill-card:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
     }
 
     .card-content2 {
@@ -820,21 +854,22 @@ h2.heading {
     }
 
     .red {
-        color: #ff0000;
+        color: #f00;
     }
 
     .yellow {
-        color: #ffcc00;
+        color: #fc0;
     }
 
     .green {
-        color: #00cc66;
+        color: #0c6;
     }
 
     @keyframes fadeIn {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
@@ -845,6 +880,7 @@ h2.heading {
             opacity: 0;
             transform: translateY(-20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -898,9 +934,11 @@ h2.heading {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
