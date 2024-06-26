@@ -698,7 +698,21 @@ h2.heading {
         right: -10px;
     }
 
-   /* Media queries for different screen sizes */
+/* Default styles */
+.mentor {
+    text-align: right;
+    float: right;
+}
+
+.mentor p {
+    margin: 0 0 10px;
+    position: absolute;
+    top: -20px;
+    right: -150px;
+    text-align: right;
+}
+
+/* Media queries for different screen sizes */
 @media (max-width: 1200px) {
     .mentor p {
         right: -100px;
@@ -716,6 +730,19 @@ h2.heading {
         right: -50px;
     }
 }
+
+@media (max-width: 468px) {
+    .mentor p {
+        right: -20px;
+    }
+}
+
+@media (max-width: 371px) {
+    .mentor p {
+        right: 0;
+    }
+}
+
     
 
     .home-content .text-animate h3 {
