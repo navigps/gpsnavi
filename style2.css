@@ -565,10 +565,10 @@ h2.heading {
 .footer-iconTop a:hover i {
     color: var(--main-color);
 }
-/* 371px - 1024px ekran boyutları için @media sorguları */
-@media screen and (min-width: 371px) and (max-width: 1024px) {
+/* 371px ekran boyutu için @media sorgusu */
+@media screen and (max-width: 371px) {
     body {
-        font-size: 60%; /* Örneğin, font boyutunu değiştirin */
+        font-size: 55%; /* Örnek olarak font büyüklüğünü ayarlayın */
     }
 
     .header {
@@ -576,64 +576,64 @@ h2.heading {
     }
 
     .navbar a {
-        font-size: 1.5rem;
-        margin-left: 3rem;
+        font-size: 1.2rem;
+        margin-left: 2rem;
     }
 
     section {
-        padding: 8rem 5%;
+        padding: 5rem 3%;
     }
 
     .home-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .home-content h5 {
-        font-size: 4.5rem;
-        margin: 90px 0 20px 0;
+        font-size: 4rem;
+        margin: 80px 0 10px 0;
     }
 
     .home-content h6 {
-        font-size: 2.8rem;
-        margin: 5px 0 20px 0;
+        font-size: 2.5rem;
+        margin: 5px 0 15px 0;
     }
 
     .home-content .text-animate h3 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .btn-box .btn {
-        margin: 4rem 0 0.5rem;
+        margin: 3rem 0 0.3rem;
     }
 
     .about h2 {
-        font-size: 3.5rem;
-        margin-bottom: -3rem;
+        font-size: 3rem;
+        margin-bottom: -2rem;
     }
 
     .about-img img {
-        width: 65%;
+        width: 60%;
     }
 
     .about-content h3 {
-        font-size: 2rem;
-        margin: 0.8rem 0 2.5rem;
+        font-size: 1.8rem;
+        margin: 0.5rem 0 2rem;
     }
 
     .movaleoba h2 {
-        font-size: 3.8rem;
+        font-size: 3.5rem;
     }
 
     .education p {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .projects-skills-container {
-        margin: 20px auto;
+        margin: 15px auto;
     }
 
     .contact h2 {
-        font-size: 4rem;
+        font-size: 3.8rem;
     }
 
     .contact form .input-box .input-field {
@@ -641,13 +641,14 @@ h2.heading {
     }
 
     .footer-text p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .footer-iconTop a i {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 }
+
 
 
 /* KEYFRAMES ANIMATION */
