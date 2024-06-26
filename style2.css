@@ -1,5 +1,3 @@
-/* General styles and variables */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -14,12 +12,11 @@
 }
 
 :root {
-    --bg-color: #1a1a1a;        /* Background color (dark grey) */
-    --second-bg-color: #555555; /* Secondary background color (darker grey) */
-    --text-color: #ffffff;      /* Text color (light grey) */
-    --main-color: #00FFFF;      /* Main accent color (neon pink) */
+    --bg-color: #1a1a1a;        /* Arka plan rengi (koyu gri) */
+    --second-bg-color: #555555; /* İkincil arka plan rengi (daha koyu gri) */
+    --text-color: #ffffff;      /* Metin rengi (açık gri) */
+    --main-color: #00FFFF;      /* Ana vurgu rengi (neon pembe) */
 }
-
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -29,8 +26,6 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
 }
-
-/* Header styles */
 
 .header {
     position: fixed;
@@ -46,6 +41,7 @@ body {
     background-color: #555;
 }
 
+
 .logo {
     position: absolute;
     top: 80px;
@@ -53,7 +49,7 @@ body {
     width: 150px;
     height: 150px;
     z-index: 98;
-    border-radius: 50%; /* Circular logo */
+    border-radius: 50%; /* Logonuzun dairesel olması için */
 }
 
 .navbar {
@@ -71,6 +67,7 @@ body {
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
+
 }
 
 #menu-icon {
@@ -80,8 +77,6 @@ body {
     cursor: pointer;
     display: none;
 }
-
-/* Home section styles */
 
 section {
     min-height: 100vh;
@@ -206,7 +201,7 @@ section {
 }
 
 .btn-box .btn1:nth-child(2):hover {
-    color: var(--bg-color);
+    color: var(--bg-color); /* İkinci düğme hover durumunda metin rengini değiştir */
 }
 
 .btn-box .btn::before {
@@ -216,16 +211,14 @@ section {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--bg-color);
-    z-index: -1;
-    transition: width 0.5s;
+    background: var(--bg-color); /* Ön plan rengi */
+    z-index: -1; /* Z-index */
+    transition: width 0.5s; /* Geçiş efekti */
 }
 
 .btn-box .btn:hover::before {
-    width: 100%;
+    width: 100%; /* Hover durumunda genişlik */
 }
-
-/* About section styles */
 
 .about {
     display: flex;
@@ -236,26 +229,22 @@ section {
     background: var(--second-bg-color);
     padding: 1rem;
 }
-
 .about h2 {
     font-size: 4.2rem;
     margin-right: 1rem;
     margin-bottom: -4rem;
 }
-
-.row {
+.row{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-
 .about-item {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .about-img {
     position: relative;
     border-radius: 50%;
@@ -264,7 +253,6 @@ section {
     align-items: center;
     margin-bottom: 1rem;
 }
-
 .about-img img {
     width: 75%;
     border-radius: 50%;
@@ -273,21 +261,21 @@ section {
 
 .about-content {
     text-align: center;
+    
 }
-
 .about-content h3 {
     position: relative;
     display: inline-block;
     font-size: 2.3rem;
     margin: 1rem 0 3rem;
-}
 
+}
 .about-content p {
     position: relative;
     font-size: 1.8rem;
     margin: 20px 0 0 0px;
-    border: 2px solid var(--main-color);
-    padding: 10px;
+    border: 2px solid var(--main-color); /* Örnek çerçeve stilini buraya uygulayın */
+    padding: 10px; /* Opsiyonel: içerideki boşluğu ayarlar */
 }
 
 @media (min-width: 768px) {
@@ -309,27 +297,27 @@ section {
     }
 }
 
-/* Education section styles */
 
+
+
+/* Education section styles */
 .duty {
     padding: 100px 1px;
     background-color: var(--bg-color);
 }
-
-.duty h2 {
+.duty h2{
     margin-top: -35px;
     text-align: center;
     font-size: 4.2rem;
 }
-
 .duty-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1500px;
     margin: 1rem auto;
+    
 }
-
 .duty-column {
     flex: 1;
     min-width: 20%;
@@ -337,30 +325,27 @@ section {
     padding: 20px;
     border-radius: 8px;
     background-color: var(--second-bg-color);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 1);
+    box-shadow: 0 8px 24px rgba(0,0,0,1);
     transition: transform 0.3s;
 }
-
 .duty-column:hover {
     transform: translateY(-10px);
 }
-
 .duty-content {
     margin-bottom: 30px;
     border: .1rem solid var(--main-color);
-}
 
+}
 .content {
     padding: 20px;
     background: var(--bg-color);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
 }
-
 .content p {
     font-size: 1.55rem;
 }
-
 .year {
     font-size: 2rem;
     color: var(--text-color);
@@ -368,112 +353,257 @@ section {
     display: flex;
 }
 
+
+
 h2.heading {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem ;
+    font-size: 4.2rem;
+    color: var(--text-color);
+}
+.education p {
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--text-color);
+}
+.projects-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 1500px;
+    padding: 1px;
+    box-shadow: 0 8px 24px rgba(0,0,0,1);
+
+    border: .1rem solid var(--main-color);
+
+}
+.projects-column, .skills-column {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+.project-card {
+    font-size: 1.3rem;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 23px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+.card-year {
+    font-size: 1.2em;
+    color: #555;
+}
+.skill-card {
+    font-size: 1.3rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.card-content2 {
+    padding: 20px;
+    text-align: center;
+}
+.card-content2 h3 {
+    font-size: 1.2em;
+    color: #555;
+}
+.red {
+    color: #ff0000;
+}
+.yellow {
+    color: #ffcc00;
+}
+.green {
+    color: #00cc66;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Contact section styles */
 
 .contact {
-    background-color: var(--second-bg-color);
-    padding: 6rem 9%;
+    min-height: auto;
+    padding-bottom: 10rem;
     text-align: center;
 }
 
 .contact h2 {
-    font-size: 4.2rem;
-    margin-bottom: 3rem;
-}
-
-.contact-form {
-    max-width: 50rem;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 2rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1.2rem;
-    font-size: 1.6rem;
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 0.5rem;
-    color: var(--text-color);
-    outline: none;
-}
-
-.form-group textarea {
-    min-height: 15rem;
-    resize: vertical;
-}
-
-.btn-submit {
     display: inline-block;
-    padding: 1.5rem 4rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--bg-color);
-    background-color: var(--main-color);
-    border: none;
-    border-radius: 0.5rem;
+    font-size: 4.7rem;
+    margin: -30px 0 10px 0; /* Başlığın altında 20 piksel boşluk bırak */
+}
+
+.contact form {
+    max-width: 120rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus {
+    width: 100%;
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea {
+    resize: none;
+}
+
+.contact form .btn-box.btns .btn {
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-.btn-submit:hover {
-    background-color: var(--bg-color);
-    color: var(--main-color);
+.btn-box.btns {
+    display: inline-block;
+    width: 50rem;
+    margin: -30px 0 10px 0; /* Başlığın altında 20 piksel boşluk bırak */
 }
 
-/* Footer styles */
+.btn-box.btns a::before {
+    background: var(--second-bg-color);
+}
 
 .footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 4rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
 }
 
-.footer p {
+.footer-text,
+.footer-iconTop {
+    position: relative;
+}
+
+.footer-text p {
     font-size: 1.6rem;
-    margin-bottom: 1rem;
 }
 
-.footer-icons {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+.footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.footer-icons a {
-    color: #fff;
-    margin: 0 1rem;
-    transition: color 0.3s;
+.footer-iconTop a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
 }
 
-.footer-icons a:hover {
+.footer-iconTop a:hover::before {
+    width: 100%;
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+    transition: .5s;
+}
+
+.footer-iconTop a:hover i {
     color: var(--main-color);
 }
 
-/* Keyframes for animations */
 
-@keyframes textBlink {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* Responsive adjustments */
 
 @media (max-width: 767px) {
     .header {
@@ -604,20 +734,69 @@ h2.heading {
         font-size: 1.4rem;
     }
 
+    .contact {
+        padding-bottom: 2rem;
+    }
+
     .contact h2 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 
-    .contact-form {
-        max-width: 100%;
-    }
-
-    .form-group textarea {
-        min-height: 10rem;
+    .contact-form .form-group textarea {
+        min-height: 8rem;
     }
 
     .footer {
-        padding: 4rem 5%;
+        padding: 3rem 5%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-text {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .footer-icon {
+        justify-content: center;
+    }
+
+    .footer-icon a {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .footer-icon a i {
+        font-size: 1.4rem;
     }
 }
 
+/* KEYFRAMES ANIMATION */
+
+@keyframes textBlink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
