@@ -20,6 +20,13 @@ html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
+/* 371px ekran boyutu için html @media sorgusu */
+@media screen and (max-width: 371px) {
+    html {
+        font-size: 50%; /* Örnek olarak font büyüklüğünü ayarlayın */
+    }
+}
+
 body {
     background: var(--bg-color);
     color: var(--text-color);
