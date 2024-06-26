@@ -23,7 +23,7 @@ html {
 /* 371px ekran boyutu için html @media sorgusu */
 @media screen and (max-width: 371px) {
     html {
-        font-size: 50%; /* Örnek olarak font büyüklüğünü ayarlayın */
+        font-size: 10%; /* Örnek olarak font büyüklüğünü ayarlayın */
     }
 }
 
@@ -56,6 +56,7 @@ body {
 /* 371px ekran boyutu için .header @media sorgusu */
 @media screen and (max-width: 100px) {
     .header {
+        font-size: 1px;
         padding: 1rem 3%; /* Örnek olarak padding'i ayarlayın */
         justify-content: center; /* Menü öğelerini merkezle */
     }
