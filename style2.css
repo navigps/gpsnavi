@@ -568,7 +568,7 @@ h2.heading {
 /* 371px ekran boyutu için @media sorgusu */
 @media screen and (max-width: 371px) {
     body {
-        font-size: 55%; /* Örnek olarak font büyüklüğünü ayarlayın */
+        font-size: 10%; /* Örnek olarak font büyüklüğünü ayarlayın */
     }
 
     .header {
