@@ -703,7 +703,7 @@ h2.heading {
     }
 
     .about-img img {
-        width: 100%;
+        width: 20%;
         border-radius: 50%;
         border: .2rem solid var(--main-color);
     }
