@@ -698,6 +698,26 @@ h2.heading {
         right: -10px;
     }
 
+   /* Media queries for different screen sizes */
+@media (max-width: 1200px) {
+    .mentor p {
+        right: -100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mentor p {
+        right: -80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mentor p {
+        right: -50px;
+    }
+}
+    
+
     .home-content .text-animate h3 {
         margin: 20px 0 15px;
         font-size: 2.5rem;
@@ -724,6 +744,7 @@ h2.heading {
         margin: 2rem 0 1rem;
         width: 100%;
     }
+
 
     .about h2 {
         font-size: 3.5rem;
