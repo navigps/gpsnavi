@@ -55,6 +55,15 @@ body {
     z-index: 98;
     border-radius: 50%; /* Logonuzun dairesel olması için */
 }
+/* 371px ekran boyutu için .logo @media sorgusu */
+@media screen and (max-width: 371px) {
+    .logo {
+        top: 40px; /* Örnek olarak pozisyonu ayarlayın */
+        left: 5px; /* Örnek olarak pozisyonu ayarlayın */
+        width: 120px; /* Örnek olarak genişliği ayarlayın */
+        height: 120px; /* Örnek olarak yüksekliği ayarlayın */
+    }
+}
 
 .navbar {
     position: relative;  
