@@ -24,6 +24,14 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
 }
+/* 371px ekran boyutu için body @media sorgusu */
+@media screen and (max-width: 371px) {
+    body {
+        background: #f0f0f0; /* Örnek olarak arka plan rengini ayarlayın */
+        color: #333; /* Örnek olarak metin rengini ayarlayın */
+    }
+}
+
 .header {
     position: fixed;
     top: 0;
