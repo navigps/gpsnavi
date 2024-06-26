@@ -39,7 +39,7 @@ body {
     background-color: grey;
 }
 /* 371px ekran boyutu için .header @media sorgusu */
-@media screen and (max-width: 371px) {
+@media screen and (max-width: 100px) {
     .header {
         padding: 1rem 3%; /* Örnek olarak padding'i ayarlayın */
         justify-content: center; /* Menü öğelerini merkezle */
