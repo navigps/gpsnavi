@@ -191,7 +191,71 @@ section {
 .btn-box .btn:hover::before {
     width: 100%; /* Hover durumunda genişlik */
 }
+/* @media sorguları ekleniyor */
 
+@media only screen and (max-width: 768px) {
+    .home {
+        padding: 0 5%;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h5 {
+        font-size: 3rem;
+        margin: 50px 0 20px;
+    }
+
+    .home-content h6 {
+        font-size: 2rem;
+        margin: 10px 0 20px;
+    }
+
+    .mentor p {
+        right: 0;
+    }
+
+    .btn-box .btn {
+        margin: 1rem 0.5rem;
+        width: calc(50% - 1rem);
+        max-width: none;
+        height: 3.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .home {
+        padding: 0 3%;
+    }
+
+    .home-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-content h5 {
+        font-size: 2.5rem;
+        margin: 40px 0 15px;
+    }
+
+    .home-content h6 {
+        font-size: 1.8rem;
+        margin: 5px 0 15px;
+    }
+
+    .mentor p {
+        right: -50px;
+    }
+
+    .btn-box .btn {
+        margin: 1rem 0.5rem;
+        width: calc(50% - 1rem);
+        max-width: none;
+        height: 3rem;
+        font-size: 1rem;
+    }
+}
 
 .about {
     display: flex;
