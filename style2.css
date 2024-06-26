@@ -639,7 +639,7 @@ h2.heading {
 
 
 
-@media (width >= 468px) and (width <= 1200px) {
+@media (width >= 100px) and (width <= 1200px) {
     .header {
         padding: 2rem 5%;
     }
@@ -699,18 +699,7 @@ h2.heading {
     }
 
 /* Default styles */
-.mentor {
-    text-align: right;
-    float: right;
-}
 
-.mentor p {
-    margin: 0 0 10px;
-    position: absolute;
-    top: -20px;
-    right: -150px;
-    text-align: right;
-}
 
 /* Media queries for different screen sizes */
 @media (max-width: 1200px) {
