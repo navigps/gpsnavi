@@ -634,6 +634,7 @@ h2.heading {
 
     #menu-icon {
         display: block;
+        cursor: pointer; /* Ensure it looks clickable */
     }
 
     .home {
