@@ -75,8 +75,8 @@ body {
     .logo {
         top: 40px; /* Örnek olarak pozisyonu ayarlayın */
         left: 5px; /* Örnek olarak pozisyonu ayarlayın */
-        width: 120px; /* Örnek olarak genişliği ayarlayın */
-        height: 120px; /* Örnek olarak yüksekliği ayarlayın */
+        width: 30px; /* Örnek olarak genişliği ayarlayın */
+        height: 30px; /* Örnek olarak yüksekliği ayarlayın */
     }
 }
 
