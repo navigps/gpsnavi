@@ -644,14 +644,29 @@ h2.heading {
         padding: 2rem 5%;
     }
 
-
-    #menu-icon {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 1000;
+*/
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background-color: #555;
+        padding: 2rem 0;
+        transition: .5s;
+        text-align: center;
+        gap: 1rem;
     }
+*/
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin-left: 0;
+    }
+
 
     .home {
         flex-direction: column;
