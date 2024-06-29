@@ -645,7 +645,7 @@ h2.heading {
     }
 
     .navbar {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         position: fixed;
