@@ -643,7 +643,7 @@ h2.heading {
     .header {
         padding: 2rem 5%;
     }
-
+*/
     .navbar {
         display: flex;
         flex-direction: column;
@@ -657,7 +657,7 @@ h2.heading {
         text-align: center;
         gap: 1rem;
     }
-
+*/
     .navbar.active {
         display: flex;
     }
