@@ -71,7 +71,14 @@ body {
 
 }
 
-
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+    
+}
 
 section {
     min-height: 100vh;
@@ -636,28 +643,7 @@ h2.heading {
     .header {
         padding: 2rem 5%;
     }
-*/
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        background-color: #555;
-        padding: 2rem 0;
-        transition: .5s;
-        text-align: center;
-        gap: 1rem;
-    }
-*/
-    .navbar.active {
-        display: flex;
-    }
 
-    .navbar a {
-        margin-left: 0;
-    }
 
     #menu-icon {
         display: block;
