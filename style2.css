@@ -136,10 +136,8 @@ section {
     text-align: right;
 }
 
-
 .home-content .text-animate {
     position: relative;
-    width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -149,12 +147,8 @@ section {
 .home-content .text-animate h3 {
     margin: 20px 0 15px;
     font-size: 3.2rem;
-    font-weight: 700;
-    color: #3498DB;
     -webkit-text-stroke: .7px var(--main-color);
     background-image: linear-gradient(var(--main-color), var(--main-color));
-    background-repeat: no-repeat;
-    background-clip: text;
     background-clip: text;
     animation: textBlink 1s infinite;
     -webkit-text-fill-color: transparent;
@@ -170,7 +164,6 @@ section {
     animation: textBlink 6s linear infinite;
     animation-delay: 2s;
 }
-
 .home-content p {
     position: relative;
     font-size: 2rem;
@@ -705,16 +698,7 @@ h2.heading {
         right: -10px;
     }
 
-    .home-content .text-animate h3 {
-        margin: 20px 0 15px;
-        font-size: 2.5rem;
-        -webkit-text-stroke: .7px var(--main-color);
-        background-image: linear-gradient(var(--main-color), var(--main-color));
-        background-clip: text;
-        animation: textBlink 1s infinite;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
-    }
+  
 
     .home-content p {
         font-size: 1.8rem;
