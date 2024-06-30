@@ -625,159 +625,160 @@ video {
 }
 
 
-@media (max-width: 1200px) {
-    html {
-        font-size: 55%;
-    }
-}
-
-@media (max-width: 991px) {
-    .header {
-        padding: 2rem 4%;
-    }
-
-    section {
-        padding: 10rem 4% 2rem;
-    }
-
-    .home {
-        padding: 0 4%;
-    }
-
-    .footer {
-        padding: 2rem 4%;
-    }
-}
-
-@media (max-width: 850px) {
-    .animate.home-img {
-        width: 55%;
-    }
-}
-
-@media (max-width: 768px) {
-    .header {
-        background: var(--bg-color);
-    }
-
-    #menu-icon {
+/* Media query for screens between 480px and 1200px */
+@media (min-width: 480px) and (max-width: 1200px) {
+    .logo {
+        width: 80%; /* Adjust the logo size */
+        margin: 0 auto;
         display: block;
+    }
+
+    .header {
+        text-align: center; /* Center align header text */
     }
 
     .navbar {
-        position: absolute;
-        top: 100%;
-        left: -100%;
-        width: 100%;
-        padding: 1rem 4%;
-        background: var(--main-color);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-        z-index: 1;
-        transition: .25s ease;
-        transition-delay: .25s;
-    }
-
-    .navbar.active {
-        left: 0;
-        transition-delay: 0s;
-    }
-
-    .navbar .active-nav {
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        z-index: -1;
-        transition: .25s ease;
-        transition-delay: 0s;
-    }
-
-    .navbar.active .active-nav {
-        left: 0;
-        transition-delay: .25s;
+        display: flex;
+        flex-direction: column; /* Stack the nav links vertically */
+        align-items: center;
     }
 
     .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        transform: translateX(-20rem);
-        transition: .25s ease;
-        transition-delay: 0s;
-    }
-
-    .navbar.active a {
-        transform: translateX(0);
-        transition-delay: .25s;
-    }
-
-    .home-imgHover {
-        pointer-events: none;
-        background: var(--bg-color);
-        opacity: .6;
-    }
-}
-
-@media (max-width: 520px) {
-    html {
-        font-size: 50%;
-    }
-
-    .home-content h1 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .home-sci {
-        width: 160px;
-    }
-
-    .home-sci a {
-        width: 38px;
-        height: 38px;
-    }
-}
-
-@media (max-width: 462px) {
-    .home-content h1 {
-        font-size: 5.2rem;
-    }
-
-    .education {
-        padding: 10rem 4% 5rem 5%;
-    }
-
-    .contact form .input-box .input-field {
-        width: 100%;
-    }
-
-    .footer {
-        flex-direction: column-reverse;
-    }
-
-    .footer p {
-        margin-top: 2rem;
+        padding: 10px 0; /* Increase padding for better touch area */
         text-align: center;
-    }
-}
-
-@media (max-width: 371px) {
-    .home {
-        justify-content: center;
+        width: 100%; /* Make nav links take full width */
     }
 
     .home-content {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
+        text-align: center; /* Center align home content */
     }
 
     .home-content h1 {
-        font-size: 5rem;
+        font-size: 2rem; /* Adjust the heading size */
+    }
+
+    .home-content h3 {
+        font-size: 1.2rem; /* Adjust the subheading size */
+    }
+
+    .home-content p {
+        font-size: 1rem; /* Adjust the paragraph size */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+    }
+
+    .container .column {
+        width: 100%;
+        padding: 10px; /* Add padding around each column */
+        box-sizing: border-box;
+    }
+
+    .text-animate {
+        font-size: 1.2rem; /* Adjust text animation size */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .btn-box {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+
+    .btn-box .btn {
+        width: 80%; /* Adjust button width */
+        margin-bottom: 10px;
+    }
+
+    .gallery {
+        padding: 20px; /* Add padding around gallery */
+    }
+
+    .gallery .heading {
+        font-size: 1.5rem; /* Adjust gallery heading size */
+        text-align: center;
+    }
+
+    .gallery .photo {
+        width: 100%;
+        margin-bottom: 10px; /* Add space between photos */
+    }
+
+    .media-container {
+        padding: 20px; /* Add padding around media container */
+    }
+
+    .video-content {
+        width: 100%; /* Adjust video content width */
+    }
+
+    .budget-container {
+        padding: 20px; /* Add padding around budget container */
+        text-align: center; /* Center align text */
+    }
+
+    .budget-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .budget-item {
+        font-size: 1.2rem; /* Adjust font size for budget items */
+        margin: 10px 0; /* Add margin between items */
+    }
+
+    .total {
+        font-size: 1.5rem; /* Adjust total budget font size */
+    }
+
+    #kaynaklar {
+        padding: 20px; /* Add padding around kaynaklar section */
+        text-align: center; /* Center align text */
+    }
+
+    #kaynaklar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #kaynaklar li {
+        margin: 10px 0; /* Add margin between items */
+    }
+
+    .contact {
+        padding: 20px; /* Add padding around contact section */
+    }
+
+    .contact .input-box {
+        display: flex;
+        flex-direction: column; /* Stack inputs vertically */
+        align-items: center;
+    }
+
+    .contact .input-field {
+        width: 80%; /* Adjust input field width */
+        margin-bottom: 10px; /* Add margin between input fields */
+    }
+
+    .contact .textarea-field {
+        width: 80%; /* Adjust textarea width */
+        margin-bottom: 10px; /* Add margin between textarea and button */
+    }
+
+    .footer {
+        text-align: center; /* Center align footer text */
+        padding: 20px;
+    }
+
+    .footer-text {
+        font-size: 1rem; /* Adjust footer text size */
+    }
+
+    .footer-iconTop {
+        margin-top: 20px;
     }
 }
 
