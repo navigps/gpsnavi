@@ -869,7 +869,6 @@ h2.heading {
     }
 }
 }
-
 /* KEYFRAMES ANIMATION */
 
 @keyframes textBlink {
@@ -886,3 +885,14 @@ h2.heading {
     }
 }
 
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
