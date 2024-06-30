@@ -869,3 +869,20 @@ h2.heading {
     }
 }
 }
+
+/* KEYFRAMES ANIMATION */
+
+@keyframes textBlink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
