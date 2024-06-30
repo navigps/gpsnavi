@@ -641,7 +641,7 @@ h2.heading {
 
 @media (width >= 100px) and (width <= 1200px) {
     .header {
-        padding: 2rem 5%;
+        padding: 2rem 12%;
     }
 
     .navbar {
