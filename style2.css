@@ -10,13 +10,15 @@
     scroll-behavior: smooth;
     font-family: Poppins, sans-serif;
 }
-
 :root {
-    --bg-color: #1a1a1a;        /* Arka plan rengi (koyu gri) */
-    --second-bg-color: #555; /* İkincil arka plan rengi (daha koyu gri) */
-    --text-color: #fff;      /* Metin rengi (açık gri) */
-    --main-color: #0FF;      /* Ana vurgu rengi (neon pembe) */
+    --bg-color: #b0bec5; /* Slate Gray */
+    --second-bg-color: #90a4ae; /* Blue Gray */
+    --text-color: #333333; /* Dark Charcoal */
+    --main-color: #2196f3; /* Blue */
 }
+
+
+
 
 html {
     font-size: 62.5%;
@@ -71,7 +73,14 @@ body {
 
 }
 
-
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+    
+}
 
 section {
     min-height: 100vh;
@@ -352,8 +361,14 @@ section {
     transition: background-color 0.3s;
 }
 
+.content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* 10 piksel alt boşluk */
+}
+
 .content p {
     font-size: 1.55rem;
+    margin-top: 10px; /* 10 piksel üst boşluk */
 }
 
 .year {
