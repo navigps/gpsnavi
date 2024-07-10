@@ -11,12 +11,11 @@
     font-family: Poppins, sans-serif;
 }
 :root {
-    --bg-color: #b0bec5; /* Slate Gray */
-    --second-bg-color: #90a4ae; /* Blue Gray */
-    --text-color: #333333; /* Dark Charcoal */
-    --main-color: #2196f3; /* Blue */
+    --bg-color: #1a1a1a;        /* Arka plan rengi (koyu gri) */
+    --second-bg-color: #555; /* İkincil arka plan rengi (daha koyu gri) */
+    --text-color: #fff;      /* Metin rengi (açık gri) */
+    --main-color: #0FF;      /* Ana vurgu rengi (neon pembe) */
 }
-
 
 
 
