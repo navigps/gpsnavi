@@ -76,7 +76,6 @@ body {
 
 }
 
-
 section {
     min-height: 100vh;
     padding: 10rem 9%;
@@ -261,6 +260,12 @@ h3 {
     width: 100%;
 }
 
+
+
+
+
+/* gallery-section */
+
 .gallery {
     max-width: 1500px;
     margin-top: 4rem;
@@ -340,6 +345,10 @@ h3 {
     transform: translateY(0);
 }
 
+
+
+
+/* media-section */
 
 .media-section {
     display: flex;
@@ -432,6 +441,8 @@ video {
     color: black;
 }
 
+
+/* Başlık stilini ayarla */
 #kaynaklar h2 {
     text-align: center;
     font-size: 4.2rem;
@@ -441,38 +452,49 @@ video {
     padding-bottom: 5px;
 }
 
+/* Liste öğelerini düzenle */
 #kaynaklar ul {
     list-style-type: none;
     padding-left: 0;
 }
 
+/* Her bir liste öğesi (li) için */
 #kaynaklar li {
     font-size: 2rem;
     margin-bottom: 8px;
     text-align: center;
 }
 
+/* Bağlantı (a) stilini belirle */
 #kaynaklar li a {
     text-decoration: none;
     color: #06c; /* Bağlantı rengi */
     font-weight: bold;
 }
 
+/* Bağlantı simgesi (Compass) */
 #kaynaklar li a::before {
     content: "🔗"; /* Compass simgesi yerine istediğiniz metni veya karakteri ekleyin */
     margin-right: 5px;
 }
 
+/* Bağlantıya hover olduğunda */
 #kaynaklar li a:hover {
     text-decoration: underline;
 }
 
+/* Bağlantıların hizalanması */
 #kaynaklar li a {
     display: inline-block;
     padding: 3px 8px;
     border: 1px solid #06c;
     border-radius: 5px;
 }
+
+
+
+
+
 
 
 
@@ -486,7 +508,8 @@ video {
     left: 50%;
     transform: translateX(-50%);
     font-size: 4.7rem;
-    margin: -30px 0 10px;
+    margin:  -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
+
 }
 
 .contact form {
@@ -531,7 +554,7 @@ video {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-bg-color);
+    background: var(--second-bg-color) ;
     border-radius: .6rem;
     z-index: -1;
     transition: .5s;
@@ -544,7 +567,7 @@ video {
     width: 100%;
 }
 
-.contact form .textarea-field {
+.contact form .textarea-field {  
     position: relative;
     margin: .8rem 0 2.7rem;
     display: flex;
@@ -561,12 +584,14 @@ video {
 .btn-box.btns {
     display: inline-block;
     width: 50rem;
-    margin: -30px 0 10px;
+    margin:  -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
+
 }
 
 .btn-box.btns a::before {
     background: var(--second-bg-color);
 }
+
 
 .footer {
     display: flex;
@@ -624,240 +649,7 @@ video {
 .footer-iconTop a:hover i {
     color: var(--main-color);
 }
-    
 
-    .home-content .text-animate h3 {
-        margin: 20px 0 15px;
-        font-size: 2.5rem;
-        -webkit-text-stroke: .7px var(--main-color);
-        background-image: linear-gradient(var(--main-color), var(--main-color));
-        background-clip: text;
-        animation: textBlink 1s infinite;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
-    }
-
-    .home-content p {
-        font-size: 1.8rem;
-        margin: 2rem 0 4rem;
-    }
-
-    .btn-box {
-        max-width: 25rem;
-        flex-direction: column;
-        margin: 0 auto;
-    }
-
-    .btn-box .btn {
-        margin: 2rem 0 1rem;
-        width: 100%;
-    }
-
-
-    .about h2 {
-        font-size: 3.5rem;
-        margin-right: 1rem;
-        margin-bottom: -2rem;
-    }
-
-    .row {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .about-item {
-        width: 100%;
-    }
-
-    .about-img img {
-        width: 20%;
-        border-radius: 50%;
-        border: .2rem solid var(--main-color);
-    }
-
-    .about-content h3 {
-        font-size: 2rem;
-        margin: 1rem 0 2rem;
-    }
-
-    .about-content p {
-        font-size: 1.6rem;
-    }
-
-    .duty h2 {
-        font-size: 3.5rem;
-    }
-
-    .duty-row {
-        flex-direction: column;
-    }
-
-    .duty-column {
-        width: 100%;
-        margin: 1rem 0;
-    }
-
-    .content p {
-        font-size: 1.4rem;
-    }
-
-    h2.heading {
-        text-align: center;
-        margin-bottom: 1rem;
-        font-size: 4.2rem;
-        color: var(--text-color);
-    }
-
-    .education p {
-        text-align: center;
-        font-size: 1.7rem;
-        color: var(--text-color);
-    }
-
-    .projects-skills-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 30px auto;
-        max-width: 1500px;
-        padding: 1px;
-        box-shadow: 0 8px 24px rgb(0 0 0 / 100%);
-        border: .1rem solid var(--main-color);
-    }
-
-    .projects-column, .skills-column {
-        flex: 1;
-        min-width: 300px;
-        margin: 10px;
-    }
-
-    .project-card {
-        font-size: 1.3rem;
-        background-color: #fff;
-        border-radius: 10px;
-        padding: 1px;
-        box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
-        margin-bottom: 23px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
-    }
-
-    .card-content {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .card-year {
-        font-size: 1.2em;
-        color: #555;
-    }
-
-    .skill-card {
-        font-size: 1.3rem;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
-        margin-bottom: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .skill-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
-    }
-
-    .card-content2 {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .card-content2 h3 {
-        font-size: 1.2em;
-        color: #555;
-    }
-
-    .red {
-        color: #f00;
-    }
-
-    .yellow {
-        color: #fc0;
-    }
-
-    .green {
-        color: #0c6;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fadeInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .contact {
-        padding-bottom: 2rem;
-    }
-
-    .contact h2 {
-        font-size: 2.5rem;
-    }
-
-    .contact-form .form-group textarea {
-        min-height: 8rem;
-    }
-
-    .footer {
-        padding: 3rem 5%;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .footer-text {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .footer-icon {
-        justify-content: center;
-    }
-
-    .footer-icon a {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-
-    .footer-icon a i {
-        font-size: 1.4rem;
-    }
-}
-
-/* KEYFRAMES ANIMATION */
 
 @keyframes textBlink {
     0% {
@@ -883,3 +675,4 @@ video {
     100% {
         width: 0;
     }
+}
