@@ -76,13 +76,6 @@ body {
 
 }
 
-#menu-icon {
-    position: relative;
-    font-size: 3.6rem;
-    color: var(--text-color);
-    cursor: pointer;
-    display: none;
-}
 
 section {
     min-height: 100vh;
@@ -268,12 +261,6 @@ h3 {
     width: 100%;
 }
 
-
-
-
-
-/* gallery-section */
-
 .gallery {
     max-width: 1500px;
     margin-top: 4rem;
@@ -353,10 +340,6 @@ h3 {
     transform: translateY(0);
 }
 
-
-
-
-/* media-section */
 
 .media-section {
     display: flex;
@@ -449,8 +432,6 @@ video {
     color: black;
 }
 
-
-/* Başlık stilini ayarla */
 #kaynaklar h2 {
     text-align: center;
     font-size: 4.2rem;
@@ -460,38 +441,32 @@ video {
     padding-bottom: 5px;
 }
 
-/* Liste öğelerini düzenle */
 #kaynaklar ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-/* Her bir liste öğesi (li) için */
 #kaynaklar li {
     font-size: 2rem;
     margin-bottom: 8px;
     text-align: center;
 }
 
-/* Bağlantı (a) stilini belirle */
 #kaynaklar li a {
     text-decoration: none;
     color: #06c; /* Bağlantı rengi */
     font-weight: bold;
 }
 
-/* Bağlantı simgesi (Compass) */
 #kaynaklar li a::before {
     content: "🔗"; /* Compass simgesi yerine istediğiniz metni veya karakteri ekleyin */
     margin-right: 5px;
 }
 
-/* Bağlantıya hover olduğunda */
 #kaynaklar li a:hover {
     text-decoration: underline;
 }
 
-/* Bağlantıların hizalanması */
 #kaynaklar li a {
     display: inline-block;
     padding: 3px 8px;
@@ -649,100 +624,6 @@ video {
 .footer-iconTop a:hover i {
     color: var(--main-color);
 }
-
-@media (width >= 100px) and (width <= 1200px) {
-    .header {
-        padding: 2rem 12%;
-    }
-
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        background-color: #555;
-        padding: 2rem 0;
-        transition: .5s;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .navbar a {
-        margin-left: 0;
-    }
-
-    #menu-icon {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 1000;
-    }
-
-    .home {
-        flex-direction: column;
-        text-align: center;
-        padding: 20rem 9% 2rem;
-    }
-
-    .home-content h5 {
-        font-size: 3.5rem;
-        font-weight: 700;
-        line-height: 1.3;
-        margin: 115px 0 40px;
-        position: relative;
-        right: -5px;
-    }
-
-    .home-content h6 {
-        font-size: 2.3rem;
-        font-weight: 700;
-        line-height: 1.3;
-        margin: 10px 0 40px;
-        position: relative;
-        right: -10px;
-    }
-
-/* Default styles */
-
-
-/* Media queries for different screen sizes */
-@media (max-width: 1200px) {
-    .mentor p {
-        right: -100px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .mentor p {
-        right: -80px;
-    }
-}
-
-@media (max-width: 768px) {
-    .mentor p {
-        right: -50px;
-    }
-}
-
-@media (max-width: 468px) {
-    .mentor p {
-        right: -20px;
-    }
-}
-
-@media (max-width: 371px) {
-    .mentor p {
-        right: 0;
-    }
-}
-
     
 
     .home-content .text-animate h3 {
