@@ -308,17 +308,6 @@ span {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @keyframes slideIn {
     from {
         transform: translateY(50px);
@@ -332,7 +321,6 @@ span {
 }
 
 
-/* Başlık stilini ayarla */
 #kaynaklar h2 {
     text-align: center;
     font-size: 4.2rem;
@@ -342,38 +330,32 @@ span {
     padding-bottom: 5px;
 }
 
-/* Liste öğelerini düzenle */
 #kaynaklar ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-/* Her bir liste öğesi (li) için */
 #kaynaklar li {
     font-size: 2rem;
     margin-bottom: 8px;
     text-align: center;
 }
 
-/* Bağlantı (a) stilini belirle */
 #kaynaklar li a {
     text-decoration: none;
     color: #06c; /* Bağlantı rengi */
     font-weight: bold;
 }
 
-/* Bağlantı simgesi (Compass) */
 #kaynaklar li a::before {
     content: "🔗"; /* Compass simgesi yerine istediğiniz metni veya karakteri ekleyin */
     margin-right: 5px;
 }
 
-/* Bağlantıya hover olduğunda */
 #kaynaklar li a:hover {
     text-decoration: underline;
 }
 
-/* Bağlantıların hizalanması */
 #kaynaklar li a {
     display: inline-block;
     padding: 3px 8px;
@@ -381,33 +363,12 @@ span {
     border-radius: 5px;
 }
 
-
-
-
-
-/* Bağlantı simgesi ve renkler */
 #kaynaklar li a::after {
     font-size: 0.8em;
     vertical-align: middle;
     margin-left: 5px;
     color: black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .contact {
@@ -560,9 +521,6 @@ span {
 .footer-iconTop a:hover i {
     color: var(--main-color);
 }
-
-
-/* KEYFRAMES ANIMATION */
 
 @keyframes textBlink {
     0% {
