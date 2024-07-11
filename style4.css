@@ -649,6 +649,7 @@ video {
 .footer-iconTop a:hover i {
     color: var(--main-color);
 }
+
 @media (width >= 100px) and (width <= 1200px) {
     .header {
         padding: 2rem 12%;
