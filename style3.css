@@ -40,8 +40,9 @@ body {
     align-items: center;
     z-index: 100;
     transition: .3s;
-    background-color: grey;
+    background-color: #555;
 }
+
 
 .logo {
     position: absolute;
