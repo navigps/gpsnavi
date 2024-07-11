@@ -73,13 +73,6 @@ body {
 
 }
 
-#menu-icon {
-    position: relative;
-    font-size: 3.6rem;
-    color: var(--text-color);
-    cursor: pointer;
-    display: none;
-}
 
 section {
     min-height: 100vh;
@@ -308,19 +301,9 @@ span {
     }
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 
+/* Başlık stilini ayarla */
 #kaynaklar h2 {
     text-align: center;
     font-size: 4.2rem;
@@ -330,32 +313,38 @@ span {
     padding-bottom: 5px;
 }
 
+/* Liste öğelerini düzenle */
 #kaynaklar ul {
     list-style-type: none;
     padding-left: 0;
 }
 
+/* Her bir liste öğesi (li) için */
 #kaynaklar li {
     font-size: 2rem;
     margin-bottom: 8px;
     text-align: center;
 }
 
+/* Bağlantı (a) stilini belirle */
 #kaynaklar li a {
     text-decoration: none;
     color: #06c; /* Bağlantı rengi */
     font-weight: bold;
 }
 
+/* Bağlantı simgesi (Compass) */
 #kaynaklar li a::before {
     content: "🔗"; /* Compass simgesi yerine istediğiniz metni veya karakteri ekleyin */
     margin-right: 5px;
 }
 
+/* Bağlantıya hover olduğunda */
 #kaynaklar li a:hover {
     text-decoration: underline;
 }
 
+/* Bağlantıların hizalanması */
 #kaynaklar li a {
     display: inline-block;
     padding: 3px 8px;
@@ -363,6 +352,11 @@ span {
     border-radius: 5px;
 }
 
+
+
+
+
+/* Bağlantı simgesi ve renkler */
 #kaynaklar li a::after {
     font-size: 0.8em;
     vertical-align: middle;
@@ -371,18 +365,30 @@ span {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .contact {
     min-height: auto;
     padding-bottom: 10rem;
+    text-align: center;
 }
 
 .contact h2 {
     display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 4.7rem;
-    margin:  -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
-
+    margin: -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
 }
 
 .contact form {
@@ -427,7 +433,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-bg-color) ;
+    background: var(--second-bg-color);
     border-radius: .6rem;
     z-index: -1;
     transition: .5s;
@@ -440,7 +446,7 @@ span {
     width: 100%;
 }
 
-.contact form .textarea-field {  
+.contact form .textarea-field {
     position: relative;
     margin: .8rem 0 2.7rem;
     display: flex;
@@ -457,8 +463,7 @@ span {
 .btn-box.btns {
     display: inline-block;
     width: 50rem;
-    margin:  -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
-
+    margin: -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
 }
 
 .btn-box.btns a::before {
@@ -521,6 +526,10 @@ span {
 .footer-iconTop a:hover i {
     color: var(--main-color);
 }
+
+
+
+/* KEYFRAMES ANIMATION */
 
 @keyframes textBlink {
     0% {
