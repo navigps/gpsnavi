@@ -360,14 +360,6 @@ h3 {
 }
 
 
-.media-section2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--bg-color);
-    color: white;
-}
 
 
 .media-container {
