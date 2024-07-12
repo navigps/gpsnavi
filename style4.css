@@ -359,6 +359,15 @@ h3 {
     color: white;
 }
 
+.media-section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: white;
+}
+
 
 
 
