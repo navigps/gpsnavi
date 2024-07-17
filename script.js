@@ -1,3 +1,19 @@
+document.querySelectorAll('.view-btn').forEach(button => {
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    let card = this.closest('.box');
+    card.classList.toggle('is-flipped');
+  });
+});
+
+document.querySelectorAll('.close-btn').forEach(button => {
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    let card = this.closest('.box');
+    card.classList.remove('is-flipped');
+  });
+});
+
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
