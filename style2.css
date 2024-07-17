@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+/* Genel ayarlar */
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +11,14 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
-    --bg-color: #1a1a1a;        /* Arka plan rengi (koyu gri) */
-    --second-bg-color: #555; /* İkincil arka plan rengi (daha koyu gri) */
-    --text-color: #fff;      /* Metin rengi (açık gri) */
-    --main-color: #0FF;      /* Ana vurgu rengi (neon pembe) */
+    --bg-color: #1a1a1a;       /* Arka plan rengi (koyu gri) */
+    --second-bg-color: #555;   /* İkincil arka plan rengi (daha koyu gri) */
+    --text-color: #fff;        /* Metin rengi (açık gri) */
+    --main-color: #0FF;        /* Ana vurgu rengi (neon pembe) */
 }
 
 html {
@@ -26,6 +29,11 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 9% 1rem;
 }
 
 .header {
@@ -39,76 +47,81 @@ body {
     align-items: center;
     z-index: 100;
     transition: .3s;
-    background-color: #555;
+    background-color: var(--second-bg-color);
 }
 
-
+/* Logo */
 .logo {
     position: absolute;
-    top: 80px;
-    left: 10px;
+    top: 50px;
+    left: -30px;
     width: 150px;
     height: 150px;
     z-index: 98;
-    border-radius: 50%; /* Logonuzun dairesel olması için */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
 }
 
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+/* Navbar */
 .navbar {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
 }
 
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
     font-weight: 500;
-    margin-left: 10rem;
     transition: .3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
-
 }
 
 #menu-icon {
-    position: relative;
-    font-size: 3.6rem;
-    color: var(--text-color);
+    font-size: 2.5rem;
     cursor: pointer;
     display: none;
-    
 }
 
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
-}
-
+/* Home Section */
 .home {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 9%;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
 }
 
 .home-content {
     max-width: 100rem;
     z-index: 99;
-    text-align: center;
+}
+
+.home-content h1,
+.home-content h5,
+.home-content h6 {
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 .home-content h1 {
     font-size: 2.9rem;
-    font-weight: 700;
-    line-height: 1.3;
     margin: 0 0 15px;
 }
 
 .home-content h5 {
     font-size: 5rem;
-    font-weight: 700;
-    line-height: 1.3;
     margin: 115px 0 40px;
     position: relative;
     right: -5px;
@@ -116,29 +129,23 @@ section {
 
 .home-content h6 {
     font-size: 3.2rem;
-    font-weight: 700;
-    line-height: 1.3;
     margin: 10px 0 40px;
     position: relative;
     right: -10px;
 }
 
 .mentor {
-    text-align: right;
-    float: right;
-}
-
-.mentor p {
-    margin: 0 0 10px;
     position: absolute;
-    top: -20px;
-    right: -150px;
-    text-align: right;
+    bottom: -20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    z-index: 1000;
 }
 
 .home-content .text-animate {
     position: relative;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,22 +157,18 @@ section {
     -webkit-text-stroke: .7px var(--main-color);
     background-image: linear-gradient(var(--main-color), var(--main-color));
     background-clip: text;
+    -webkit-background-clip: text;
     animation: textBlink 1s infinite;
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
-}
-
-.home-content .text-animate h3 {
-    animation: textBlink 3s linear infinite;
-    animation-delay: 1.5s;
+    animation: textBlink 3s linear infinite 1.5s;
 }
 
 .home-content .text-animate h3::before {
-    animation: textBlink 6s linear infinite;
-    animation-delay: 2s;
+    animation: textBlink 6s linear infinite 2s;
 }
+
 .home-content p {
-    position: relative;
     font-size: 2rem;
     margin: 2rem 0 4rem;
 }
@@ -202,7 +205,7 @@ section {
 }
 
 .btn-box .btn1:nth-child(2):hover {
-    color: var(--bg-color); /* İkinci düğme hover durumunda metin rengini değiştir */
+    color: var(--bg-color);
 }
 
 .btn-box .btn::before {
@@ -212,174 +215,316 @@ section {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--bg-color); /* Ön plan rengi */
-    z-index: -1; /* Z-index */
-    transition: width 0.5s; /* Geçiş efekti */
+    background: var(--bg-color);
+    z-index: -1;
+    transition: width 0.5s;
 }
 
 .btn-box .btn:hover::before {
-    width: 100%; /* Hover durumunda genişlik */
+    width: 100%;
 }
 
+
+
+
+
+
+
+
+
+
+
+/* Container stil ayarları */
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    background: var(--second-bg-color);
-    padding: 1rem;
+    overflow: hidden;
+    transform: skew(0deg);
+    position: relative; /* Container'ı referans alarak h2 başlığı pozisyonlandıracağız */
+  }
+  .about h2{
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 120px 20px;
+    color: white;
+    font-size: 3.5rem;
+    z-index: 1000; /* Container üzerinde diğer elementlerin üstünde olması için z-index */
 }
-
-.about h2 {
-    font-size: 4.2rem;
-    margin-right: 1rem;
-    margin-bottom: -4rem;
-}
-
-.row{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.about-item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about-img {
+  
+  /* Card stil ayarları */
+  .card {
+    flex: 1;
+    transition: all 1s ease-in-out;
+    height: 65vmin;
     position: relative;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-}
+    margin: 25px;
 
-.about-img img {
-    width: 75%;
-    border-radius: 50%;
-    border: .2rem solid var(--main-color);
-}
-
-.about-content {
+  }
+  
+  .card__head {
+    color: black;
+    background: rgba(255, 30, 173, 0.75);
+    padding: 0.4em;
+    transform: rotate(-90deg);
+    transform-origin: 0% 0%;
+    transition: all 0.5s ease-in-out;
+    min-width: 100%;
     text-align: center;
-    
-}
+    position: absolute;
+    bottom: 0;
+    left: -33px;
+    font-size: 1.7rem;
+    white-space: nowrap;
+  }
+  
+  .description {
+    text-align: center;
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: -100%;
+    left: -35px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    transition: bottom 0.5s ease-in-out;
+    margin-top: 20px;
 
-.about-content h3 {
-    position: relative;
-    display: inline-block;
-    font-size: 2.3rem;
-    margin: 1rem 0 3rem;
+  }
+  
+  .card:hover {
+    flex-grow: 4;
+  }
+  
 
-}
+  .card:hover .card__head {
+    top: calc(100% - 2em);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    transform: rotate(0deg) skew(-5deg);
+  }
+  
+  .card:hover .description {
+    bottom: -65px;
+  }
+  
+  /* Resim stil ayarları */
+  img {
+    text-align: center;
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    margin: 50px;
 
-.about-content p {
-    position: relative;
-    font-size: 1.8rem;
-    margin: 20px 0 0;
-    border: 2px solid var(--main-color); /* Örnek çerçeve stilini buraya uygulayın */
-    padding: 10px; /* Opsiyonel: içerideki boşluğu ayarlar */
-}
-
-@media (width >= 768px) {
-    .about-item {
-        width: 48%;
-        margin-bottom: 2rem;
-    }
-}
-
-@media (width >= 1024px) {
-    .about-item {
-        width: 30%;
-        margin-bottom: 2rem;
-    }
-
-    .about-img {
-        width: 25rem;
-        height: 25rem;
-    }
-}
+  }
+  
+  /* :not(:nth-child(5)) stil ayarları */
+  :not(:nth-child(5)) {
+    margin-right: 1em;
+  }
+  
+ 
 
 
 
 
-/* Education section styles */
+
+
+  
+
+
 .duty {
-    padding: 100px 1px;
-    background-color: var(--bg-color);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative; /* Position relative eklendi */
+    padding-top: 10px; /* Başlığın görünmesi için üstten boşluk verildi */
 }
 
-.duty h2{
-    margin-top: -35px;
-    text-align: center;
+.duty h2 {
+    position: absolute;
+    top: 0; /* Başlığın üstten başlayacak şekilde konumlandırılması */
+    left: 50%; /* Ortalanması için sol kenar ortada */
+    transform: translateX(-50%); /* Ortalamayı tamamlama */
+    padding: 80px;
+    color: white;
     font-size: 3.5rem;
 }
 
-.duty-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1500px;
-    margin: 1rem auto;
-    
-}
 
-.duty-column {
-    flex: 1;
-    min-width: 20%;
-    margin: 8px;
-    padding: 20px;
-    border-radius: 8px;
+
+
+
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 470px;
     background-color: var(--second-bg-color);
-    box-shadow: 0 8px 24px rgb(0 0 0 / 100%);
-    transition: transform 0.3s;
+    box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+    margin-top: 150px;
+    border-radius: 5rem;
+    overflow: hidden;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-.duty-column:hover {
-    transform: translateY(-10px);
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
 }
 
-.duty-content {
-    margin-bottom: 30px;
-    border: .1rem solid var(--main-color);
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
 
+.back {
+    transform: rotateY(180deg);
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: none; /* initially hidden */
+}
+
+.box.is-flipped .front {
+    transform: rotateY(-180deg);
+}
+
+.box.is-flipped .back {
+    transform: rotateY(0deg);
+    display: block; /* show when flipped */
+    transition: transform 0.8s; /* animation transition */
+}
+
+.content img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; /* Görsellerin yuvarlak olması için */
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+    margin: 60px 35px; /* Görselleri ortalamak için */
 }
 
 .content {
+    text-align: center;
+}
+
+.content strong {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1.9rem;
     padding: 20px;
-    background: var(--bg-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
-    transition: background-color 0.3s;
 }
 
 .content p {
-    font-size: 1.55rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
-.year {
-    font-size: 2rem;
-    color: var(--text-color);
-    margin-bottom: 8px;
-    display: flex;
+.btn {
+    margin-top: auto;
+    text-align: center;
 }
+
+.btn .view-btn{
+    text-align: center;
+    position: absolute; /* Position absolute ile sabitleriz */
+    bottom: 10px; /* Alttan 20px yukarıda yerleştiririz */
+    right: 100px; /* Sağdan 20px içerde yerleştiririz */
+}
+
+.btn a {
+    display: inline-block;
+    background-color: #509bfc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn a:hover {
+    background-color: #4070d0;
+}
+
+.box .btn {
+    display: block; /* Ensure the view button is visible */
+}
+
+.box.is-flipped .btn {
+    display: none; /* Hide the view button when flipped */
+}
+
+.back {
+    margin-top: auto;
+    text-align: center;
+    background-color: var(--second-bg-color);
+}
+
+.back a {
+    display: inline-block;
+    background-color: #509bfc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back p {
+    margin-top: -50px;
+    font-size: 1.49rem;
+}
+
+.back a:hover {
+    background-color: #4070d0;
+}
+
+.back .close-btn {
+    text-align: center;
+    position: absolute; /* Position absolute ile sabitleriz */
+    bottom: 60px; /* Alttan 20px yukarıda yerleştiririz */
+    right: 100px; /* Sağdan 20px içerde yerleştiririz */
+}
+
+.back .close-btn i {
+    margin-right: 5px;
+}
+
+
+
+
+
 
 
 
 
 .education p {
+    margin-top: 10px;
     text-align: center;
     font-size: 1.7rem;
     color: var(--text-color);
 }
 
 .education h2{
-    margin-top: -35px;
+    margin-top: -20px;
     text-align: center;
     font-size: 3.5rem;
 }
@@ -580,7 +725,11 @@ section {
     background: var(--second-bg-color);
 }
 
+
+
+
 .footer {
+    width: 110%; /* 110% yerine 100% yapıldı */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -595,7 +744,9 @@ section {
 }
 
 .footer-text p {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-left: -100px; /* Negatif margin yerine 0 yapıldı */
 }
 
 .footer-iconTop a {
@@ -603,10 +754,10 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: .8rem;
+    padding: 10px;
     background: var(--main-color);
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
+    border: .3rem solid var(--main-color);
+    border-radius: 50px; /* 90px yerine % ile yuvarlatma yapıldı */
     z-index: 1;
     overflow: hidden;
 }
@@ -628,7 +779,7 @@ section {
 }
 
 .footer-iconTop a i {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     color: var(--bg-color);
     transition: .5s;
 }
@@ -638,31 +789,10 @@ section {
 }
 
 
-
-/* KEYFRAMES ANIMATION */
-
+  
 @keyframes textBlink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
-@keyframes aboutSpinner {
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
 
-@keyframes showRight {
-    100% {
-        width: 0;
-    }
-}
