@@ -1,0 +1,612 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: #1a1a1a; /* Arka plan rengi (koyu gri) */
+  --second-bg-color: #555; /* İkincil arka plan rengi (daha koyu gri) */
+  --text-color: #fff; /* Metin rengi (açık gri) */
+  --main-color: #0ff; /* Ana vurgu rengi (neon pembe) */
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+section {
+  min-height: 100vh;
+  padding: 10rem 9%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: 0.3s;
+  background-color: var(--second-bg-color);
+}
+/* Logo */
+.logo {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  width: 150px;
+  height: 150px;
+  z-index: 98;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: rotate(360deg);
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.5rem;
+  margin-right: -110px;
+}
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.3s;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+#menu-icon {
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 9%;
+}
+.home-content {
+  margin-top: 12rem;
+  max-width: 100rem;
+  z-index: 99;
+  text-align: center;
+}
+.home-content h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 2.5;
+  margin: -10rem 0 10px;
+  text-align: center;
+}
+.home-content h3 {
+  font-size: 2.7rem;
+}
+.home-content p {
+  font-size: 2.3rem;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.column {
+  width: 45%;
+  margin-top: 15px;
+}
+.column h4 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  background-color: #555;
+  box-shadow: 0 2px 12px rgb(0, 238, 255);
+  border-radius: 20px;
+  height: 4rem;
+  line-height: 2;
+}
+.column p {
+  font-size: 1.7rem;
+  line-height: 2.3;
+  box-shadow: 0 2px 12px rgb(0, 238, 255);
+  border-radius: 50px;
+  height: 12rem;
+  background-color: slategray;
+  color: white;
+}
+.column2 {
+  width: 45%;
+  margin-top: 15px;
+}
+.column2 h4 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  background-color: #555;
+  box-shadow: 0 2px 12px rgb(255, 0, 0);
+  border-radius: 20px;
+  height: 4rem;
+  line-height: 2;
+}
+.column2 p {
+  font-size: 1.7rem;
+  line-height: 3.2;
+  box-shadow: 0 2px 12px rgb(255, 0, 0);
+  border-radius: 50px;
+  height: 12rem;
+  background-color: slategray;
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+.home-content .text-animate {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-content .text-animate h3 {
+  margin: 20px 0 15px;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #3498db;
+  -webkit-text-stroke: 0.7px var(--main-color);
+  background-image: linear-gradient(var(--main-color), var(--main-color));
+  background-repeat: no-repeat;
+  background-clip: text;
+  background-clip: text;
+  animation: textBlink 1s infinite;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+.home-content .text-animate h3 {
+  animation: textBlink 3s linear infinite;
+  animation-delay: 1.5s;
+}
+.text-animate {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn-box {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50rem;
+  margin: 0 auto;
+  gap: 10px;
+}
+.btn-box .btn {
+  margin: 5rem 0 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(50% - 0.25rem);
+  height: 5rem;
+  background: var(--main-color);
+  border: 0.5rem solid var(--main-color);
+  border-radius: 10rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.5s, color 0.5s;
+}
+.btn-box .btn:hover {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+.btn-box .btn:nth-child(1) {
+  order: 1;
+}
+.btn-box .btn1:nth-child(2) {
+  order: 2;
+  background: transparent;
+  color: var(--main-color);
+}
+.btn-box .btn1:nth-child(2):hover {
+  color: var(--bg-color);
+}
+.btn-box .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: -1;
+  transition: width 0.5s;
+}
+.btn-box .btn:hover::before {
+  width: 100%;
+}
+/* gallery-section */
+.gallery {
+  max-width: 100%;
+  background-color: var(--bg-color);
+}
+.gallery h2 {
+  position: relative;
+  color: white;
+  top: -20px;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.top-row,
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.photo {
+  width: calc(
+    33.33% - 20px
+  ); /* Her fotoğraf arasında 20px boşluk bırakmak için */
+  margin-right: 40px; /* Sağ taraftaki fotoğraflar için sağ boşluk */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: var(--second-bg-color);
+  border-radius: 30px;
+  box-shadow: 0 2px 12px rgb(0, 238, 255);
+}
+.photo:last-child {
+  margin-right: 0; /* Son fotoğrafın sağ tarafına boşluk bırakmamak için */
+}
+.photo img {
+  margin-left: 5rem;
+  max-width: 67%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.photo:hover {
+  transform: translateY(-10px);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 100%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+}
+.photo:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+.description {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.photo:hover .description {
+  transform: translateY(0);
+}
+.media-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: white;
+  flex-direction: column; /* Yatay ve dikey hizalamayı sağlamak için */
+  text-align: center; /* İçerikleri merkezi hizalamak için */
+}
+.media-section h2 {
+  position: relative;
+  color: white;
+  font-size: 3.5rem;
+  margin-top: 100px; /* Gerekirse başlığı yukarı doğru kaydır */
+}
+.media-container {
+  margin-top: -2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  width: auto;
+}
+.video-content,
+.photo-content {
+  margin: 35px 0;
+}
+video {
+  width: 90%;
+  border: 5px solid #fff;
+  border-radius: 10px;
+}
+.budget-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color-bg-color);
+  padding: 20px;
+}
+.budget-container {
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+}
+.budget-container h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #333;
+  font-size: 4.7rem; /* Başlık font boyutu artırıldı */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.budget-list {
+  color: #333;
+  list-style-type: none;
+  padding: 0;
+}
+.budget-item {
+  text-align: center;
+  font-size: 2rem;
+  padding: 12px; /* Öğe içeriği artırıldı */
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px; /* Köşe yuvarlatması artırıldı */
+  transition: background-color 0.3s ease;
+}
+.budget-item:hover {
+  background-color: #e9ecef;
+}
+.budget-item strong {
+  color: #007bff;
+  font-weight: bold; /* Metin kalınlaştırıldı */
+}
+.total {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.6rem; /* Toplam font boyutu artırıldı */
+  color: black;
+}
+.links {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+.links h2 {
+  font-size: 3.5rem;
+  margin-top: 10rem;
+  color: var(--text-color);
+}
+.card-link {
+  display: block;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  max-width: 800px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Kartın içindeki dalga efekti için gerekli */
+  overflow: hidden; /* Kartın içindeki dalga efekti için gerekli */
+}
+.card-link h3 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+.card-link p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+.card-link .ocean {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Kartın içindeki dalga efekti için gerekli */
+}
+.wave {
+  background: #52b3e0;
+  display: inline-block;
+  height: 100%; /* Dalga yüksekliği */
+  width: 10px; /* Dalga genişliği küçültüldü */
+  position: absolute;
+  bottom: 0;
+  animation: dostuff 1s infinite ease-in-out;
+}
+@keyframes dostuff {
+  0% {
+    height: 12px;
+  }
+  50% {
+    height: 7px;
+  }
+  100% {
+    height: 12px;
+  }
+}
+.contact {
+  min-height: auto;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+.contact h2 {
+  display: inline-block;
+  font-size: 4.7rem;
+  margin: -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
+}
+.contact form {
+  max-width: 120rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact form .input-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box .input-field {
+  position: relative;
+  width: 49%;
+  margin: 0.8rem 0;
+}
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  background: transparent;
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--main-color);
+}
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+  color: var(--text-color);
+}
+.contact form .focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--second-bg-color);
+  border-radius: 0.6rem;
+  z-index: -1;
+  transition: 0.5s;
+}
+.contact form .input-box .input-field input:focus ~ .focus,
+.contact form .input-box .input-field input:valid ~ .focus,
+.contact form .textarea-field textarea:focus ~ .focus,
+.contact form .textarea-field textarea:valid ~ .focus {
+  width: 100%;
+}
+.contact form .textarea-field {
+  position: relative;
+  margin: 0.8rem 0 2.7rem;
+  display: flex;
+}
+.contact form .textarea-field textarea {
+  resize: none;
+}
+.contact form .btn-box.btns .btn {
+  cursor: pointer;
+}
+.btn-box.btns {
+  display: inline-block;
+  width: 50rem;
+  margin: -30px 0 10px; /* Başlığın altında 20 piksel boşluk bırak */
+}
+.btn-box.btns a::before {
+  background: var(--second-bg-color);
+}
+.footer {
+  width: 110%; /* 110% yerine 100% yapıldı */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+}
+.footer-text,
+.footer-iconTop {
+  position: relative;
+}
+.footer-text p {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-left: -100px; /* Negatif margin yerine 0 yapıldı */
+}
+.footer-iconTop a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: var(--main-color);
+  border: 0.3rem solid var(--main-color);
+  border-radius: 50px; /* 90px yerine % ile yuvarlatma yapıldı */
+  z-index: 1;
+  overflow: hidden;
+  margin-left: -100px;
+}
+.footer-iconTop a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--second-bg-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.footer-iconTop a:hover::before {
+  width: 100%;
+}
+.footer-iconTop a i {
+  font-size: 2.5rem;
+  color: var(--bg-color);
+  transition: 0.5s;
+}
+.footer-iconTop a:hover i {
+  color: var(--main-color);
+}
+@keyframes textBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
